@@ -22,7 +22,7 @@ This repository contains a simple load balancer implemented in PHP using the Rou
 2. Navigate to the repository directory:
 
     ```bash
-    cd php-load-balancer
+    cd simple-load-balancer
 
 ## Configuration
 
