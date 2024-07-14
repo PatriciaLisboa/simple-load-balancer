@@ -36,7 +36,7 @@ class LoadBalancer {
 
     public function forwardRequest(): void {
         $server = $this->getNextServer();
-        echo "Forwarding to server: $server\n"; // Debug output
+        echo "Forwarding to server: $server"; // Debug output
 
         $curl = curl_init($server);
         
@@ -65,7 +65,7 @@ class LoadBalancer {
         
         if ($response === false) {
             http_response_code(502);
-            echo "Error forwarding request: " . curl_error($curl) + "\n";
+            echo "Error forwarding request: " . curl_error($curl);
             return;
         }
         
@@ -86,6 +86,6 @@ class LoadBalancer {
         }
         
         // Output the response body
-        echo $body + "\n";
+        echo $body;
     }
 }
